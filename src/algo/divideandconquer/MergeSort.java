@@ -9,11 +9,11 @@ public class MergeSort {
         int pb = 0;
         int p1 = s,p2 = m+1;
         while( p1 <= m && p2 <= e) {
-            if( a[p1] < a[p2])
-                tmp[pb++] = a[p1++];
-            else{
+            if( a[p1] > a[p2]) {
                 tmp[pb++] = a[p2++];
-                sum += m + 1 - s;
+                sum += m + 1 - p1;
+            }else{
+                tmp[pb++] = a[p1++];
             }
 
         }
